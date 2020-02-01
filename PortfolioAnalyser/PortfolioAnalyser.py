@@ -38,5 +38,5 @@ def compute_rolling_cagr(dataframe, years):
         rolling_result.append(result[0])
 
     final_df = pd.DataFrame(data = rolling_result, index = dataframe.index[0:number], columns = ['Ret'])
-    final_df = final_df.loc[Quotes.index[0] + pd.DateOffset(years=years):]
+    final_df = final_df.loc[dataframe.index[0] + pd.DateOffset(years=years):]
     return final_df    
