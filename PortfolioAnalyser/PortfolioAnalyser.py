@@ -1,3 +1,7 @@
+import pandas as pd
+import numpy as np
+import datetime
+
 def merge_time_series(df_1, df_2):
     df = df_1.merge(df_2, how='left', left_index=True, right_index=True)
     return df
